@@ -75,12 +75,15 @@
   }
 }
 
-@media (min-width: 501px) and (max-width: 650px) {
+@media (min-width: 501px) and (max-width: 708px) {
   .items-grid {
     grid-template-columns: 1fr 1fr;
   }
-  form .field-group .field+.field {
-    margin-left: 8px;
+  form .field-group {
+    flex-direction: column;
+  }
+  form .field-group .field + .field {
+    margin-left: 0;
   }
 }
 
