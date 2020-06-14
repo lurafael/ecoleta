@@ -1,0 +1,88 @@
+#page-sucess {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#page-sucess header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+
+#page-sucess main {
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-sucess main .content {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px auto;
+}
+
+#page-sucess h1 {
+  width: 500px;
+  margin: 30px auto;
+  font-size: 50px;
+}
+
+#page-sucess main .content p {
+  line-height: 30px;
+  font-size: 20px;
+  max-width: 500px;
+  max-height: 250px;
+  margin: 15px auto;
+}
+
+#page-sucess header a {
+  display: flex;
+  font-size: 0.1px;
+}
+
+#page-sucess main img {
+  transform: translateY(4%);
+}
+
+#page-sucess main a {
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  width: 100%;
+  max-width: 360px;
+  height: 72px;
+  border-radius: 8px;
+  transition: 400ms;
+  margin-top: 30px;
+}
+
+#page-sucess main a:hover {
+  background-color: #2fb86e;
+}
+
+#page-sucess main a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 72px;
+  height: 72px;
+}
+
+#page-sucess main a span::after {
+  content: "";
+  background-image: url("/assets/arrow-left2.svg");
+  width: 20px;
+  height: 20px;
+}
+
+#page-sucess main a strong {
+  color: white;
+  flex: 1;
+  text-align: center;
+}

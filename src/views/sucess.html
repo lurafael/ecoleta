@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-sucess" %}
+
+{% block title %}
+  <title>Cadastro Concluído</title>
+{% endblock title %}
+
+{% block styles %}
+  <link rel="stylesheet" href="styles/sucess.css">
+{% endblock styles %}
+
+{% block content %}
+
+  <div class="a-header">
+    {% include "partials/page-header.html" %}
+  </div>
+
+  <main>
+    <div class="content">
+      <h1>Cadastro efetuado com sucesso!</h1>
+      <p>A Coleta Seletiva possui um papel importantíssimo para o meio ambiente seguindo o objetivo de fazer com que vários tipos de resíduos sigam seu caminho para reciclagem ou destinação final ambientalmente correta.</p>
+      <a href="/">
+        <span></span>
+        <strong>Ir para a página principal</strong>
+      </a>
+    </div>
+    <img src="assets/background3.png" alt="sucess-registration">
+  </main>
+
+{% endblock content %}
