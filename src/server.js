@@ -12,6 +12,20 @@ nunjucks.configure('src/views', {
 });
 
 server.get("/", (req, res) => {
+  db.serialize(() => {
+    db.run(`
+      CREATE TABLE IF NOT EXISTS places (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        image TEXT,
+        name TEXT,
+        address TEXT,
+        address2 TEXT,
+        state TEXT,
+        city TEXT,
+        items TEXT
+      );`
+    );
+  });
   return res.render('index.html')
 });
 
@@ -20,7 +34,7 @@ server.get("/create-point", (req, res) => {
 });
 
 server.post("/savepoint", (req, res) => {
-  const query = `
+const query = `
     INSERT INTO places (
       image,
       name,
@@ -32,27 +46,28 @@ server.post("/savepoint", (req, res) => {
     ) VALUES (?,?,?,?,?,?,?);
   `;
 
-  const values = [
-    req.body.image,
-    req.body.name,
-    req.body.address,
-    req.body.address2,
-    req.body.state,
-    req.body.city,
-    req.body.items
-  ];
+const values = [
+  req.body.image,
+  req.body.name,
+  req.body.address,
+  req.body.address2,
+  req.body.state,
+  req.body.city,
+  req.body.items
+];
 
-  db.run(query, values, afterInsertData);
+db.run(query, values, afterInsertData);
 
-  function afterInsertData(err) {
-    if (err)
-      return console.log(err);
+function afterInsertData(err) {
+  if (err)
+    return console.log(err);
   return res.render('sucess.html');
-  }
+}
 });
 
 server.get("/search-results", (req, res) => {
-  const search = req.query.search;
+  const search = req.query.search
+
   if (search === '')
     return res.render('search-results.html', { totalPlaces: 0 });
 

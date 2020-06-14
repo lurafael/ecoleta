@@ -1,7 +1,7 @@
 <h1 align="center">
-  <img src="public/assets/logo.svg" width="250px" /><br>
+  <img src="public/assets/logo.svg" width="350px" /><br>
   Reciclar é importante!
-</h2>
+</h1>
 <p align="center">
   <a href="https://rocketseat.com.br">
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-green">
@@ -14,6 +14,8 @@
 ### :recycle: Projeto
 
 O Ecoleta é uma ferramenta que visa conectar entidades de coleta de resíduos orgânicos e inorgânicos com pessoas que precisam descartar seus resíduos de maneira ecológica.
+
+<img align="center" alt=" Homepage photo" src="public/assets/ecoleta-page-main.png">
 
 ### :rocket: Tecnologias usadas
 O projeto foi desenvolvido com as seguintes tecnologias:
@@ -48,7 +50,7 @@ npm start
 
 ### :mortar_board: Quem ministrou?
 
-O Next Level Week foi ministrado pelo maravilhoso professor [Mayk Brito](https://github.com/maykbrito) !!!
+O Next Level Week foi ministrado pelo professor [Mayk Brito](https://github.com/maykbrito). 
 
 ### Sobre o projeto
 
