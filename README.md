@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="public/assets/logo.svg" width="250px" /><br>
+  <img src="public/assets/logo.svg" width="340px" /><br>
   Reciclar é importante!
 </h2>
 <p align="center">
