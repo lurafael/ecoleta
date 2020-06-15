@@ -12,20 +12,6 @@ nunjucks.configure('src/views', {
 });
 
 server.get("/", (req, res) => {
-  db.serialize(() => {
-    db.run(`
-      CREATE TABLE IF NOT EXISTS places (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        image TEXT,
-        name TEXT,
-        address TEXT,
-        address2 TEXT,
-        state TEXT,
-        city TEXT,
-        items TEXT
-      );`
-    );
-  });
   return res.render('index.html')
 });
 
@@ -66,14 +52,14 @@ function afterInsertData(err) {
 });
 
 server.get("/search-results", (req, res) => {
-  const search = req.query.search
+  const search = req.query.search;
 
   if (search === '')
     return res.render('search-results.html', { totalPlaces: 0 });
 
   db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function (err, rows) {
-    const totalPlaces = rows.length;
-
+    let totalPlaces =  rows.length;
+    console.log(totalPlaces)
     if (err)
       return console.log(err);
     return res.render('search-results.html', {
