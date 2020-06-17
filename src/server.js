@@ -59,7 +59,6 @@ server.get("/search-results", (req, res) => {
 
   db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function (err, rows) {
     let totalPlaces =  rows.length;
-    console.log(totalPlaces)
     if (err)
       return console.log(err);
     return res.render('search-results.html', {
