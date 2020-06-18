@@ -65,3 +65,5 @@ Aprendi a utilizar várias funcionalidades que não conhecia com as tecnologias 
 - JavaScript: Manipulação da página na parte de cadastros e consumo dos dados do IBGE com uma lógica muito bacana.
 
 ---
+
+Feito com 💜 by Lucas Ricci 👋 [Entre na comunidade da Rocketseat!](https://discordapp.com/invite/gCRAFhc)
